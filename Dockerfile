@@ -6,9 +6,9 @@ RUN apt-get -qqy update \
     && apt install -qqy --no-install-recommends \
     python3 python3-pip python3-lxml software-properties-common \
     && add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable \
-    && apt install -qqy --no-install-recommends \
+    && apt install -qqy --no-install-recommends aria2 curl \
     qbittorrent-nox tzdata p7zip-full p7zip-rar xz-utils pv jq \
-    ffmpeg locales unzip neofetch \
+    ffmpeg locales unzip neofetch libmagic-dev \
     && rm -rf /var/lib/apt/lists/* \
     && apt -qqy autoclean
 
@@ -16,7 +16,7 @@ RUN apt-get -qqy update \
 FROM base as builder
 
 RUN apt -qqy update \
-    && apt install -qqy --no-install-recommends aria2 \
+    && apt install -qqy --no-install-recommends \
     make g++ gcc automake autoconf libtool libcurl4-openssl-dev qt5-default \
     git libsodium-dev libssl-dev libcrypto++-dev libc-ares-dev \
     libsqlite3-dev libfreeimage-dev swig libboost-all-dev \
