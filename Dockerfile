@@ -35,10 +35,10 @@ RUN git clone https://github.com/meganz/sdk.git --depth=1 -b v$MEGA_SDK_VERSION 
 
 FROM base
 
-COPY --from=builder /root/home/sdk/bindings/python/dist/ /root/mega-sdk
+COPY --from=builder /root/home/sdk /root/home/sdk
 
-RUN pip3 install /root/mega-sdk/megasdk-$MEGA_SDK_VERSION-*.whl \
-    && rm -rf /root/mega-sdk \
+RUN pip3 install /root/home/sdk/bindings/python/dist/megasdk-$MEGA_SDK_VERSION-*.whl \
+    && rm -rf /root/home/sdk \
     && locale-gen en_US.UTF-8
 
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
