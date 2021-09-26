@@ -2,17 +2,21 @@
 Docker image for [slam-mirrorbot](https://github.com/SlamDevs/slam-mirrorbot)
 
 ## Status
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/breakdowns/mega-sdk-python?style=for-the-badge&label=Docker%20Build&logo=docker)
-![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/breakdowns/mega-sdk-python?style=for-the-badge&label=Docker%20Size&logo=docker)
-![Docker Pulls](https://img.shields.io/docker/pulls/breakdowns/mega-sdk-python?style=for-the-badge&label=Docker%20Pull&logo=docker)
+### Ubuntu Focal
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rzlamrr/mega-sdk-python/Docker%20Focal?color=blueviolet&logo=docker&logoColor=green&style=for-the-badge)
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/rzlamrr/megasdk/focal?color=blueviolet&logo=docker&logoColor=green&style=for-the-badge)
+
+### Debian Bullseye
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rzlamrr/mega-sdk-python/Docker%20Debian?color=blue&logo=docker&logoColor=green&style=for-the-badge)
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/rzlamrr/megasdk/bullseye?logo=docker&logoColor=green&style=for-the-badge)
 
 ## How to use?
 ```
-docker pull breakdowns/mega-sdk-python:latest
+docker pull rzlamrr/megasdk:focal
 ```
 
-# Credits
+## Credits
 - [`Izzy12`](https://github.com/lzzy12) for Original Source
 - [`KenHV`](https://github.com/KenHV) for Workflow
 
-And many more people who aren't mentioned here, but can be found in [Contributors](https://github.com/SlamDevs/mega-sdk-python/graphs/contributors).
+And many more people who aren't mentioned here, but can be found in [Contributors](https://github.com/rzlamrr/mega-sdk-python/graphs/contributors).
