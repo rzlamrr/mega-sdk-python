@@ -1,9 +1,9 @@
-name: Docker
+name: Docker Debian
 
 on:
   push:
     paths:
-      - "Dockerfile"
+      - "Bullseye"
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v2.7.0
         with:
           context: .
-          file: ./Dockerfile
+          file: ./Bullseye
           platforms: linux/amd64, linux/arm64
           push: true
-          tags: rzlamrr/megasdk:newer
+          tags: rzlamrr/megasdk:bullseye
